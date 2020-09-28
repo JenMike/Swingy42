@@ -34,7 +34,7 @@ public class Game {
 
     private void generateGameMap() {
         int level = hero.getLevel();
-        mapSize = (level - 1) * 5 + 10 - (level % 2);
+        mapSize = ((level - 1) * 5) + (10 - (level % 2));
         map = new boolean[mapSize][mapSize];
     }
 

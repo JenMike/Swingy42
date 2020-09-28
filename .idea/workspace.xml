@@ -24,39 +24,38 @@
   <component name="ChangeListManager">
     <list default="true" id="a69651cc-85c3-4db9-a147-0ebcc31b8fe6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jmichael/swingy/beans/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jmichael/swingy/beans/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jmichael/swingy/beans/avatar/Avatar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jmichael/swingy/beans/avatar/Avatar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jmichael/swingy/beans/avatar/AvatarClassCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jmichael/swingy/beans/avatar/AvatarClassCreator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/jmichael/swingy/beans/avatar/Hero.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jmichael/swingy/beans/avatar/Hero.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jmichael/swingy/beans/avatar/Villain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jmichael/swingy/beans/avatar/Villain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/jmichael/swingy/controller/CreateAvatarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jmichael/swingy/controller/CreateAvatarController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/jmichael/swingy/controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jmichael/swingy/controller/GameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jmichael/swingy/controller/LoadAvatarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jmichael/swingy/controller/LoadAvatarController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jmichael/swingy/controller/StartGameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jmichael/swingy/controller/StartGameController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jmichael/swingy/sqlite/SqliteDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jmichael/swingy/sqlite/SqliteDB.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/jmichael/swingy/view/console/CreateAvatarConsoleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jmichael/swingy/view/console/CreateAvatarConsoleView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/jmichael/swingy/view/console/GameConsoleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jmichael/swingy/view/console/GameConsoleView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jmichael/swingy/view/console/LoadAvatarConsoleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jmichael/swingy/view/console/LoadAvatarConsoleView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/jmichael/swingy/view/console/StartGameConsoleView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jmichael/swingy/view/console/StartGameConsoleView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/jmichael/swingy/view/gui/CreateAvatarGuiView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jmichael/swingy/view/gui/CreateAvatarGuiView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/jmichael/swingy/view/gui/GameGuiView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jmichael/swingy/view/gui/GameGuiView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/jmichael/swingy/view/gui/LoadAvatarGuiView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jmichael/swingy/view/gui/LoadAvatarGuiView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jmichael/swingy/view/gui/StartGameGuiView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jmichael/swingy/view/gui/StartGameGuiView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/jmichael/swingy/beans/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jmichael/swingy/beans/Game.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/jmichael/swingy/beans/avatar/Avatar.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jmichael/swingy/beans/avatar/Avatar.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/jmichael/swingy/beans/avatar/AvatarClassCreator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jmichael/swingy/beans/avatar/AvatarClassCreator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/jmichael/swingy/beans/avatar/Hero.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jmichael/swingy/beans/avatar/Hero.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/jmichael/swingy/beans/avatar/Villain.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jmichael/swingy/beans/avatar/Villain.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/jmichael/swingy/controller/CreateAvatarController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jmichael/swingy/controller/CreateAvatarController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/jmichael/swingy/controller/GameController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jmichael/swingy/controller/GameController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jmichael/swingy/controller/LoadAvatarController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jmichael/swingy/controller/LoadAvatarController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jmichael/swingy/controller/StartGameController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jmichael/swingy/controller/StartGameController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jmichael/swingy/sqlite/SqliteDB.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jmichael/swingy/sqlite/SqliteDB.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/jmichael/swingy/view/console/CreateAvatarConsoleView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jmichael/swingy/view/console/CreateAvatarConsoleView.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/jmichael/swingy/view/console/GameConsoleView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jmichael/swingy/view/console/GameConsoleView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jmichael/swingy/view/console/LoadAvatarConsoleView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jmichael/swingy/view/console/LoadAvatarConsoleView.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/jmichael/swingy/view/console/StartGameConsoleView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jmichael/swingy/view/console/StartGameConsoleView.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/jmichael/swingy/view/gui/CreateAvatarGuiView$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jmichael/swingy/view/gui/CreateAvatarGuiView$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/jmichael/swingy/view/gui/CreateAvatarGuiView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jmichael/swingy/view/gui/CreateAvatarGuiView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/jmichael/swingy/view/gui/GameGuiView$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jmichael/swingy/view/gui/GameGuiView$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/jmichael/swingy/view/gui/GameGuiView$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jmichael/swingy/view/gui/GameGuiView$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/jmichael/swingy/view/gui/GameGuiView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jmichael/swingy/view/gui/GameGuiView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/jmichael/swingy/view/gui/LoadAvatarGuiView$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jmichael/swingy/view/gui/LoadAvatarGuiView$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/jmichael/swingy/view/gui/LoadAvatarGuiView$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jmichael/swingy/view/gui/LoadAvatarGuiView$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/jmichael/swingy/view/gui/LoadAvatarGuiView$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jmichael/swingy/view/gui/LoadAvatarGuiView$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jmichael/swingy/view/gui/StartGameGuiView$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jmichael/swingy/view/gui/StartGameGuiView$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jmichael/swingy/view/gui/StartGameGuiView$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jmichael/swingy/view/gui/StartGameGuiView$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jmichael/swingy/view/gui/StartGameGuiView$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jmichael/swingy/view/gui/StartGameGuiView$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jmichael/swingy/view/gui/StartGameGuiView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jmichael/swingy/view/gui/StartGameGuiView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/jmichael/swingy/view/gui/LoadAvatarGuiView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jmichael/swingy/view/gui/LoadAvatarGuiView.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/swingy-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/swingy-1.0.jar" afterDir="false" />
     </list>
@@ -84,7 +83,20 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/stuff/blackk" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -95,6 +107,8 @@
       <option name="presentableId" value="Default" />
       <updated>1601202361520</updated>
       <workItem from="1601202363392" duration="5352000" />
+      <workItem from="1601212737627" duration="9260000" />
+      <workItem from="1601310145213" duration="2766000" />
     </task>
     <servers />
   </component>
@@ -111,5 +125,12 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="466" y="124" width="424" height="479" key="FileChooserDialogImpl" timestamp="1601214045927">
+      <screen x="0" y="0" width="1366" height="734" />
+    </state>
+    <state x="466" y="124" width="424" height="479" key="FileChooserDialogImpl/0.0.1366.734@0.0.1366.734" timestamp="1601214045927" />
   </component>
 </project>

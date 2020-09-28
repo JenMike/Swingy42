@@ -4,7 +4,7 @@ import jmichael.swingy.beans.Artifact;
 
 public class Villain extends Avatar {
 
-    private Artifact artifact;
+    private final Artifact artifact;
 
     public Villain(String name, int attack, int defense, int hitPoints, Artifact artifact) {
         super(name, attack, defense, hitPoints);

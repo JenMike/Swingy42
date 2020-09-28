@@ -29,7 +29,7 @@ public class CreateAvatarConsoleView implements CreateAvatarView {
                 "** Classes   attack   defense      hp  **\n"+CYAN+
                 "-----------------------------------------\n"+
                 "** Monk       [50]      [80]      [100]**\n" +
-                "** Cleric     [40]      [35]      [90] **\n" +
+                "** Cleric     [40]      [35]      [95] **\n" +
                 "** Wizard     [45]      [15]      [90] **\n" +
                 "** Druid      [35]      [25]      [120]**\n" +
                 "** Fighter    [95]      [20]      [75] **\n" +
@@ -38,12 +38,12 @@ public class CreateAvatarConsoleView implements CreateAvatarView {
                 "*****************************************\n");
         System.out.println(GREEN+"** [ENTER CLASS] **");
         String heroClass = scanner.nextLine();
-        System.out.println(GREEN+"** [ENTER yes/y] - are you sure of your choice? (ctrl + c to quit :) ) **");
+        System.out.println(GREEN+"** Confirm? (y to continue | ctrl+c to quit) **");
         while (scanner.hasNext()) {
             String input = scanner.nextLine();
 
-            if ("yes".equalsIgnoreCase(input) || "y".equalsIgnoreCase(input)) {
-                controller.onCreateAvatar(name, heroClass);
+            if ("y".equalsIgnoreCase(input)) {
+                controller.onConfirmAvatar(name, heroClass);
                 break;
             } else {
                 System.out.println("** ERROR :: [Invalid Command] **");

@@ -17,11 +17,11 @@ public class Hero extends Avatar {
     private Armor armor;
     private Helmet helmet;
 
-    @Min(value = 1, message = "Level cannot be less than 1")
+    @Min(value = 0, message = "Level cannot be less than 0")
     private int level;
 
-    @Min(value = 0, message = "Experience cannot be less than 0")
-    private int experience;
+    @Min(value = 0, message = "XP cannot be less than 0")
+    private int xp;
 
     @NotNull(message = "Hero class cannot be null")
     private String heroClass;
@@ -29,14 +29,14 @@ public class Hero extends Avatar {
     private int id;
 
     public Hero(String name, int attack, int defense, int hitPoints, int id, String heroClass,
-                int level, int experience, Weapon weapon, Armor armor, Helmet helmet) {
+                int level, int xp, Weapon weapon, Armor armor, Helmet helmet) {
         super(name, attack, defense, hitPoints);
         this.id = id;
         this.weapon = weapon;
         this.armor = armor;
         this.helmet = helmet;
         this.level = level;
-        this.experience = experience;
+        this.xp = xp;
         this.heroClass = heroClass;
     }
 
@@ -56,17 +56,13 @@ public class Hero extends Avatar {
         Set<ConstraintViolation<Hero>> constraintViolations = validator.validate(this);
         if (constraintViolations.size() != 0) {
             StringBuilder stringBuilder = new StringBuilder();
-            stringBuilder.append("Hero validation error(s): ");
+            stringBuilder.append("[Hero Validation Error] ");
             stringBuilder.append(constraintViolations.size());
             stringBuilder.append("\n");
             for (ConstraintViolation<Hero> cv : constraintViolations) {
-                stringBuilder.append("property: [");
-                stringBuilder.append(cv.getPropertyPath());
-                stringBuilder.append("], value: [");
-                stringBuilder.append(cv.getInvalidValue());
-                stringBuilder.append("], message: [");
+                stringBuilder.append("[ERROR] :: ");
                 stringBuilder.append(cv.getMessage());
-                stringBuilder.append("]\n");
+                stringBuilder.append("\n");
             }
             throw new ValidationException(stringBuilder.toString());
         }
@@ -100,12 +96,12 @@ public class Hero extends Avatar {
         this.armor = armor;
     }
 
-    public void addExperience(int addXP) {
+    public void xpScore(int newXP) {
         int nextLevel = (level + 1) * 1000 + level * level * 450;
 
-        if (experience + addXP >= nextLevel)
+        if (xp + newXP >= nextLevel)
             levelUp();
-        experience += addXP;
+        xp += newXP;
     }
 
     private void levelUp() {
@@ -148,11 +144,11 @@ public class Hero extends Avatar {
     }
 
     public int getExperience() {
-        return experience;
+        return xp;
     }
 
     public void setExperience(int experience) {
-        this.experience = experience;
+        this.xp = experience;
     }
 
     public String getHeroClass() {
@@ -168,29 +164,27 @@ public class Hero extends Avatar {
         StringBuilder sb = new StringBuilder();
         sb.append("       [Name]    :: ").append(name).append("\n");
         sb.append("       [Class]   :: ").append(heroClass).append("\n");
-        sb.append("       [Level]   :: ").append(level).append("\n");
-        sb.append("       [XP]      :: ").append(experience).append("\n");
+        sb.append("       [HP]      :: ").append(hitPoints).append("\n");
+        sb.append("       [XP]      :: ").append(xp).append("\n");
         sb.append("       [Attack]  :: ").append(attack).append("\n");
         sb.append("       [Defense] :: ").append(defense).append("\n");
-        sb.append("       [HP]      :: ").append(hitPoints).append("\n");
+        sb.append("       [Level]   :: ").append(level).append("\n\n");
 
+        sb.append("       [Helmet]  :: ");
+        if (helmet != null)
+            sb.append(helmet.getName()).append(" [+").append(helmet.getPoints()).append("] HP \n");
+        else
+            sb.append(" [ ]\n");
         sb.append("       [Weapon]  :: ");
         if (weapon != null)
-            sb.append(weapon.getName()).append(" (attack +").append(weapon.getPoints()).append(")\n");
+            sb.append(weapon.getName()).append(" [+").append(weapon.getPoints()).append("] attack\n");
         else
-            sb.append(" no weapon\n");
-
-        sb.append("       [Helm]    :: ");
-        if (helmet != null)
-            sb.append(helmet.getName()).append(" (hp +").append(helmet.getPoints()).append(")\n");
-        else
-            sb.append(" no helmet\n");
-
+            sb.append(" [ ]\n");
         sb.append("       [Armor]   :: ");
         if (armor != null)
-            sb.append(armor.getName()).append(" (defense +").append(armor.getPoints()).append(")\n");
+            sb.append(armor.getName()).append(" [+").append(armor.getPoints()).append("] defense\n");
         else
-            sb.append(" no armor\n");
+            sb.append(" [ ]\n");
         return sb.toString();
     }
 }

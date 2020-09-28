@@ -12,11 +12,11 @@ import java.awt.event.ActionListener;
 
 public class CreateAvatarGuiView extends JPanel implements CreateAvatarView {
 
-    private JLabel avatarNameLabel = new JLabel("Avatar name: ");
+    private JLabel avatarNameLabel = new JLabel(" < Avatar name > ");
     private JTextField avatarFieldBox = new JTextField(17);
     private JButton createButton = new JButton("Create Avatar");
     private String[] avatarClasses = {"Monk", "Cleric", "Wizard", "Paladin", "Druid", "Fighter"};
-    private JLabel avatarClass = new JLabel("Class:");
+    private JLabel avatarClass = new JLabel(" < Class > ");
     private JComboBox<String> classesComboBox = new JComboBox<>(avatarClasses);
     private JEditorPane gamePane = new JEditorPane();
 
@@ -37,14 +37,16 @@ public class CreateAvatarGuiView extends JPanel implements CreateAvatarView {
     private void buildUI() {
         Main.getFrame().setTitle("Create Avatar");
         this.setLayout(new GridBagLayout());
-        this.setBackground(Color.BLACK);
         this.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        this.setBackground(Color.BLACK);
+        avatarClass.setBackground(Color.black);
+        classesComboBox.setBackground(Color.BLACK);
+        classesComboBox.setForeground(Color.ORANGE);
 
 
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.gridwidth = GridBagConstraints.REMAINDER;
         gbc.fill = GridBagConstraints.HORIZONTAL;
-        gbc.fill = GridBagConstraints.VERTICAL;
         gbc.insets = new Insets(5, 5, 5, 5);
 
         JPanel createAvatarPanel = new JPanel();
@@ -56,9 +58,10 @@ public class CreateAvatarGuiView extends JPanel implements CreateAvatarView {
 
         avatarClass.setForeground(Color.LIGHT_GRAY);
         avatarFieldBox.setBackground(Color.LIGHT_GRAY);
-        avatarNameLabel.setForeground(Color.WHITE);
-        createButton.setBackground(Color.BLACK);
-        createButton.setForeground(Color.GREEN);
+        avatarNameLabel.setForeground(Color.RED);
+        avatarClass.setForeground(Color.RED);
+        createButton.setBackground(Color.black);
+        createButton.setForeground(Color.red);
 
         JPanel classPannel = new JPanel();
         classPannel.add(avatarClass);
@@ -69,7 +72,7 @@ public class CreateAvatarGuiView extends JPanel implements CreateAvatarView {
         this.add(classPannel, gbc);
 
         gamePane.setEditable(false);
-        gamePane.setFont(new Font("monospaced", Font.PLAIN, 15));
+        gamePane.setFont(new Font("monospaced", Font.PLAIN, 14));
         gamePane.setBackground(Color.BLACK);
         gamePane.setForeground(Color.GREEN);
         gamePane.setText("\n"+"\n"+"\n"+"\n"+"\n"+"        *****************************************\n"+
@@ -103,7 +106,7 @@ public class CreateAvatarGuiView extends JPanel implements CreateAvatarView {
         createButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                controller.onCreateAvatar(avatarFieldBox.getText(), (String) classesComboBox.getSelectedItem());
+                controller.onConfirmAvatar(avatarFieldBox.getText(), (String) classesComboBox.getSelectedItem());
             }
         });
     }

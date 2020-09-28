@@ -15,8 +15,8 @@ import java.awt.event.ActionListener;
 public class LoadAvatarGuiView extends JPanel implements LoadAvatarView {
 
     private JEditorPane textPane = new JEditorPane();
-    private JButton selectButton = new JButton("Select");
-    private JButton createButton = new JButton("Create");
+    private JButton selectButton = new JButton("Load Avatar");
+    private JButton createButton = new JButton("Create new");
 
     private LoadAvatarController controller;
     private int lastSelectedIdx;
@@ -25,10 +25,10 @@ public class LoadAvatarGuiView extends JPanel implements LoadAvatarView {
     public void render() {
         controller = new LoadAvatarController(this);
 
-        buildUI();
+        renderUI();
     }
 
-    private void buildUI() {
+    private void renderUI() {
         Main.getFrame().setTitle("Load Saved Hero");
         this.setLayout(new GridBagLayout());
         this.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
@@ -47,12 +47,17 @@ public class LoadAvatarGuiView extends JPanel implements LoadAvatarView {
         JScrollPane listScroll = new JScrollPane(list);
         listScroll.setPreferredSize(new Dimension(200, 200));
         listScroll.setMinimumSize(new Dimension(150, 150));
+        list.setBackground(Color.BLACK);
+        list.setForeground(Color.LIGHT_GRAY);
         this.add(listScroll);
 
         textPane.setEditable(false);
-        textPane.setText("Select hero to see stats");
+        textPane.setBackground(Color.LIGHT_GRAY);
+        textPane.setForeground(Color.BLACK);
+        textPane.setFont(new Font("monospaced", Font.PLAIN, 10));
+        textPane.setText("Select a hero");
         if (data.length == 0)
-            textPane.setText("No avatars were previously saved.");
+            textPane.setText("No avatars were previously saved!");
         JScrollPane infoScroll = new JScrollPane(textPane);
         infoScroll.setPreferredSize(new Dimension(200, 200));
         infoScroll.setMinimumSize(new Dimension(150, 150));
@@ -61,9 +66,9 @@ public class LoadAvatarGuiView extends JPanel implements LoadAvatarView {
         this.add(selectButton, gbc);
         this.add(createButton, gbc);
         selectButton.setBackground(Color.BLACK);
+        selectButton.setForeground(Color.WHITE);
         createButton.setBackground(Color.BLACK);
-        selectButton.setForeground(Color.GREEN);
-        createButton.setForeground(Color.GREEN);
+        createButton.setForeground(Color.WHITE);
 
         //BRO
         selectButton.setEnabled(false);

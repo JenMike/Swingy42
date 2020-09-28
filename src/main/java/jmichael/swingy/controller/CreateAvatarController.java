@@ -17,7 +17,7 @@ public class CreateAvatarController {
         game = Game.getInstance();
     }
 
-    public void onCreateAvatar(String name, String heroClass) {
+    public void onConfirmAvatar(String name, String heroClass) {
         Hero hero;
         try {
             hero = AvatarGenerator.newHero(name, heroClass);

@@ -42,7 +42,7 @@ public class GameConsoleView implements GameView {
         System.out.println(CYAN+"***         [A] - To move WEST <left>          ***");
         System.out.println(CYAN+"***         [S] - To move SOUTH <down>         ***");
         System.out.println(CYAN+"***         [D] - To move EAST <right>         ***");
-        System.out.println(CYAN+"***         [SWITCH] - To switch to GUI mode   ***");
+        System.out.println(CYAN+"***         [GUI] - To switch mode             ***");
         System.out.println(CYAN+"***                                            ***");
         System.out.println(CYAN+"**************************************************");
         System.out.println(GREEN+"** [Enter Command Below]: **");
@@ -59,7 +59,7 @@ public class GameConsoleView implements GameView {
                     "a".equalsIgnoreCase(input)) {
                 controller.moveAvatar(input);
                 break;
-            } else if ("switch".equalsIgnoreCase(input)) {
+            } else if ("gui".equalsIgnoreCase(input)) {
                 controller.onSwitchModeCommand();
                 break;
             } else {
@@ -70,23 +70,21 @@ public class GameConsoleView implements GameView {
 
     @Override
     public void printGameMap(boolean[][] mapArray, GameMap heroPosition) {
-        int finalRes = controller.game.getHero().getLevel() % 2;
-        int level = controller.game.getHero().getLevel() - 1 * 5 + 10 - finalRes % 2;
 
         System.out.println(GREEN+"[** -- MAP -- **]");
         System.out.println();
-        for (int i = 0; i < level; i++) {
-            for (int j = 0; j < level; j++) {
+        for (int i = 0; i < mapArray.length; i++) {
+            for (int j = 0; j < mapArray[i].length; j++) {
                 if (heroPosition.getX() == j && heroPosition.getY() == i)
-                    System.out.print(GREEN+"[0_0\"] ");
+                    System.out.print(GREEN+"[0_0] ");
                 else if (mapArray[i][j])
-                    System.out.print(RED+"[ -.-] ");
+                    System.out.print(RED+"[-.-] ");
                 else
-                    System.out.print(CYAN+"[    ] ");
+                    System.out.print(CYAN+"[   ] ");
             }
             System.out.println();
         }
-        System.out.printf(GREEN+"**** %d x %d ****", level, level);
+        System.out.printf(GREEN+"***** %d x %d *****", mapArray.length, mapArray.length);
         System.out.println();
     }
 

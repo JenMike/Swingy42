@@ -75,7 +75,7 @@ public class GameController {
 
     private void winGame() {
         view.showPopup("[VICTORY!] You won the battle against the firebenders! here's an extra " + game.getMapSize() * 100 + "XP!");
-        levelUp(game.getMapSize() * 100);
+        levelUpText(game.getMapSize() * 100);
         updateDB();
         view.endGame();
     }
@@ -127,8 +127,8 @@ public class GameController {
 
         if (playerXP > 0) {
             view.showPopup("[VICTORY!] you received " + playerXP + " XP!");
-            game.getHero().addExperience(playerXP);
-            game.getHero().setLevel(game.getHero().getLevel() + 1);
+            levelUpText(playerXP);
+
             //fixes bug of recurring villain on map after defeat.
             game.getMap()[game.getHeroPosition().getY()][game.getHeroPosition().getX()] = false;
 
@@ -139,9 +139,9 @@ public class GameController {
         }
     }
 
-    private void levelUp(int addXP) {
+    private void levelUpText(int xpValue) {
         int level = game.getHero().getLevel();
-        game.getHero().addExperience(addXP);
+        game.getHero().xpScore(xpValue);
         if (level != game.getHero().getLevel()){
             view.showPopup("*** [LEVEL UP!] ***\n" +
                     "-- Your HP, defense and attack points increased! --");

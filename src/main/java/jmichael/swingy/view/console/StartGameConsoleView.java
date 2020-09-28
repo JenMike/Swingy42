@@ -16,14 +16,14 @@ public class StartGameConsoleView implements StartGameView {
         controller = new StartGameController(this);
         System.out.println(CYAN+"**************************************************");
         System.out.println(CYAN+"*****                                        *****");
-        System.out.println(CYAN+"*****"+GREEN+"   0_0 [SWINGY AVATAR - CONSOLE] 0_0    "+CYAN+"*****");
-        System.out.println(CYAN+"*****                                        *****");
-        System.out.println(CYAN+"*****            -- OPTIONS: --              *****");
-        System.out.println(CYAN+"*****    [CREATE] - To create Avatar         *****");
-        System.out.println(CYAN+"*****    [SELECT] - To load a saved Avatar   *****");
-        System.out.println(CYAN+"*****    [SWITCH] - To create Avatar         *****");
-        System.out.println(CYAN+"*****                                        *****");
-        System.out.println(CYAN+"**************************************************");
+        System.out.println(CYAN+"*****"+GREEN+" 0_0 [SWINGY AVATAR - CONSOLE] 0_0   "+CYAN+"  *****");
+        System.out.println(CYAN+"*****                                       *****");
+        System.out.println(CYAN+"*****           -- OPTIONS: --              *****");
+        System.out.println(CYAN+"*****    [CREATE | To create Avatar]        *****");
+        System.out.println(CYAN+"*****    [SELECT | To load a saved Avatar]  *****");
+        System.out.println(CYAN+"*****    [GUI    | To create Avatar]        *****");
+        System.out.println(CYAN+"*****                                       *****");
+        System.out.println(CYAN+"*************************************************");
 
         Scanner scanner = Main.getScanner();
         System.out.println();
@@ -37,7 +37,7 @@ public class StartGameConsoleView implements StartGameView {
             } else if ("select".equalsIgnoreCase(input)) {
                 controller.onSelectAvatar();
                 break;
-            } else if ("switch".equalsIgnoreCase(input)) {
+            } else if ("gui".equalsIgnoreCase(input)) {
                 controller.onSwitchMode();
                 break;
             } else {

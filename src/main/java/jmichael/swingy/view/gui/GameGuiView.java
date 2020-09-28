@@ -37,12 +37,13 @@ public class GameGuiView extends JPanel implements GameView {
         this.setLayout(new GridBagLayout());
         this.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
         this.setBackground(Color.BLACK);
-        this.setForeground(Color.CYAN);
+        this.setForeground(Color.GREEN);
+        directionsComboBox.setBackground(Color.BLACK);
+        directionsComboBox.setForeground(Color.ORANGE);
 
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.gridwidth = GridBagConstraints.REMAINDER;
         gbc.fill = GridBagConstraints.HORIZONTAL;
-        gbc.fill = GridBagConstraints.VERTICAL;
 
 
         gamePane.setEditable(false);
@@ -51,10 +52,12 @@ public class GameGuiView extends JPanel implements GameView {
         gamePane.setMinimumSize(new Dimension(400, 400));
         this.add(gamePane, gbc);
         gamePane.setBackground(Color.BLACK);
-        gamePane.setForeground(Color.CYAN);
-        gbc.insets = new Insets(5, 5, 10, 5);
+        gamePane.setForeground(Color.GREEN);
+        gbc.insets = new Insets(5, 5, 5, 5);
 
         mapPane.setEditable(false);
+        gamePane.setBackground(Color.BLACK);
+        gamePane.setForeground(Color.GREEN);
         mapPane.setText("Map");
         JScrollPane mapScroll = new JScrollPane(mapPane);
         mapScroll.setPreferredSize(new Dimension(300, 300));
@@ -65,12 +68,16 @@ public class GameGuiView extends JPanel implements GameView {
         this.add(moveButton, gbc);
         this.add(switchButton, gbc);
 
+        this.setVisible(true);
         this.setBackground(Color.BLACK);
         this.setForeground(Color.GREEN);
-        this.setVisible(true);
         Main.getFrame().setContentPane(this);
         Main.getFrame().revalidate();
         Main.showFrame();
+        moveButton.setBackground(Color.BLACK);
+        switchButton.setBackground(Color.BLACK);
+        moveButton.setForeground(Color.ORANGE);
+        switchButton.setForeground(Color.ORANGE);
 
         moveButton.addActionListener(new ActionListener() {
             @Override
@@ -89,26 +96,27 @@ public class GameGuiView extends JPanel implements GameView {
     @Override
     public void printGameMap(boolean[][] mapArray, GameMap heroPosition) {
         StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append(String.format("[GAME MAP SIZE - %dx%d]\n", mapArray.length, mapArray.length));
+        stringBuilder.append("         [** -- MAP -- **]\n\n     ");
         for (int i = 0; i < mapArray.length; i++) {
             for (int j = 0; j < mapArray[i].length; j++) {
                 if (heroPosition.getX() == j && heroPosition.getY() == i)
-                    stringBuilder.append("[0.0\"] ");
+                    stringBuilder.append("[0.0]");
                 else if (mapArray[i][j])
-                    stringBuilder.append("[ -.-] ");
+                    stringBuilder.append("[  -.-]");
                 else
-                    stringBuilder.append("[    ] ");
+                    stringBuilder.append("[     ]");
             }
             stringBuilder.append("\n");
         }
+        stringBuilder.append("\n");
+        stringBuilder.append(String.format("         ** -%d x %d- **\n\n", mapArray.length, mapArray.length));
         mapPane.setText(stringBuilder.toString());
-
     }
 
     @Override
     public void updateGameData(Game game) {
         StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append("            [** -- MAP -- **]\n\n     ");
+        stringBuilder.append("              [** -- MAP -- **]\n\n       ");
         for (int i = 0; i < game.getMap().length; i++) {
             for (int j = 0; j < game.getMap()[i].length; j++) {
                 if (game.getHeroPosition().getX() == j && game.getHeroPosition().getY() == i)
@@ -118,15 +126,12 @@ public class GameGuiView extends JPanel implements GameView {
                 else
                     stringBuilder.append("[     ]");
             }
-            stringBuilder.append("      \n     ");
-
-            //     printMap(game.getMap(), game.getHeroCoord());
+            stringBuilder.append("\n       ");
         }
         stringBuilder.append("\n");
-        stringBuilder.append(String.format("         ** -%d x %d- **\n\n", game.getMap().length, game.getMap().length));
-        stringBuilder.append("          ** < X -- [" + game.getHeroPosition().getX() +
-                "," + game.getHeroPosition().getY() + "] -- Y > **\n");
-        gamePane.setText(stringBuilder.toString() + "\n" + game.getHero().toString());
+        stringBuilder.append(String.format("               ** -%d x %d- **\n", game.getMap().length, game.getMap().length));
+        gamePane.setText(stringBuilder.toString() + "\n" + "[" + game.getHeroPosition().getX() +
+                "," + game.getHeroPosition().getY() + "]\n" + game.getHero().toString());
     }
 
     @Override
@@ -146,7 +151,7 @@ public class GameGuiView extends JPanel implements GameView {
         Object options[] = {"Fight", "Run"};
 
         int result = JOptionPane.showOptionDialog(Main.getFrame(),
-                "OH NO! You have encountered the fire nation!",
+                "OH NO! You have encountered a fire bender!",
                 "Fight or run?", JOptionPane.YES_NO_OPTION,
                 JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
         if (result == JOptionPane.YES_OPTION)

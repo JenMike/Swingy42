@@ -9,7 +9,7 @@ import java.util.concurrent.ThreadLocalRandom;
 public abstract class Avatar {
 
     @NotNull(message = "Name cannot be null")
-    @Size(min = 2, max = 16, message = "Name length cannot be less than 2 or greater than 16")
+    @Size(min = 2, max = 20, message = "Name length must be 2-20 characters long")
     protected String name;
 
     @Min(value = 0, message = "Attack should not be less than 0")
