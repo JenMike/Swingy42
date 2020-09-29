@@ -10,4 +10,6 @@ to run:
 
 change argument in run.sh to run in either gui or console.
 
+view in-game screenshots here -
+
 https://github.com/JenMike/Swingy42/issues/1#issue-711335356
